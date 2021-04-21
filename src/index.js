@@ -11,4 +11,6 @@ mongoose.connect(
 );
 
 //create a server object:
-app.listen(3000, () => console.log("Iniciando a aplicação"));
+app.listen(process.env.PORT || 8080, () =>
+  console.log("Listennig on ", process.env.PORT)
+);
